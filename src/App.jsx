@@ -9,15 +9,13 @@ import productosJSON from './data/productos.json';
 
 function App() {
   const [cart, setCart] = useState([]);
-  const [productos, setProductos] = useState(productosJSON);
   const [busqueda, setBusqueda] = useState('');
 
   const agregarAlCarrito = (producto) => {
     setCart([...cart, producto]);
   };
 
-  // Filtrado de productos según el buscador
-  const productosFiltrados = productos.filter((p) =>
+  const productosFiltrados = productosJSON.filter((p) =>
     p.nombre.toLowerCase().includes(busqueda.toLowerCase())
   );
 
@@ -36,4 +34,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

@@ -1,58 +1,10 @@
 [
-  {
-    "id": 1,
-    "nombre": "Notebook Gamer ASUS ROG Strix G16",
-    "precio": 1299990,
-    "imagen": "https://m.media-amazon.com/images/I/71-FHcMZkcL._AC_SL1500_.jpg",
-    "valoracion": 5
-  },
-  {
-    "id": 2,
-    "nombre": "iPhone 15 Pro Max 256GB",
-    "precio": 1219990,
-    "imagen": "https://m.media-amazon.com/images/I/81Os1SDWpcL._AC_SL1500_.jpg",
-    "valoracion": 5
-  },
-  {
-    "id": 3,
-    "nombre": "Monitor LG UltraGear 27'' 165Hz QHD",
-    "precio": 349990,
-    "imagen": "https://m.media-amazon.com/images/I/61bWPEuD5TL._AC_SL1500_.jpg",
-    "valoracion": 4
-  },
-  {
-    "id": 4,
-    "nombre": "Mouse Gamer Logitech G502 HERO",
-    "precio": 49990,
-    "imagen": "https://m.media-amazon.com/images/I/61mpMH5TzkL._AC_SL1500_.jpg",
-    "valoracion": 5
-  },
-  {
-    "id": 5,
-    "nombre": "Teclado Mecánico HyperX Alloy Origins",
-    "precio": 89990,
-    "imagen": "https://m.media-amazon.com/images/I/71BvUMDbtAL._AC_SL1500_.jpg",
-    "valoracion": 4
-  },
-  {
-    "id": 6,
-    "nombre": "Audífonos Inalámbricos Sony WH-1000XM5",
-    "precio": 299990,
-    "imagen": "https://m.media-amazon.com/images/I/51aXvjzcukL._AC_SL1500_.jpg",
-    "valoracion": 5
-  },
-  {
-    "id": 7,
-    "nombre": "SSD NVMe Samsung 980 PRO 1TB",
-    "precio": 119990,
-    "imagen": "https://m.media-amazon.com/images/I/71qSPZJ-5sL._AC_SL1500_.jpg",
-    "valoracion": 5
-  },
-  {
-    "id": 8,
-    "nombre": "Cámara Web Logitech C920 HD Pro",
-    "precio": 69990,
-    "imagen": "https://m.media-amazon.com/images/I/71iNwnHT3IL._AC_SL1500_.jpg",
-    "valoracion": 4
-  }
+  { "id": 1, "nombre": "Notebook Gamer ASUS ROG Strix G16", "precio": 1299990, "valoracion": 5, "imagen": "https://images.pexels.com/photos/3747070/pexels-photo-3747070.jpeg?cs=srgb&dl=pexels-polina-zimmerman-3747070.jpg&fm=jpg" },
+  { "id": 2, "nombre": "iPhone 15 Pro Max 256GB", "precio": 1219990, "valoracion": 5, "imagen": "https://images.pexels.com/photos/3605/person-woman-apple-iphone.jpg?cs=srgb&dl=pexels-jeshoots-3605.jpg&fm=jpg" },
+  { "id": 3, "nombre": "Monitor LG UltraGear 27 165Hz QHD", "precio": 349990, "valoracion": 4, "imagen": "https://images.pexels.com/photos/1714202/pexels-photo-1714202.jpeg?cs=srgb&dl=pexels-joshsorenson-1714202.jpg&fm=jpg" },
+  { "id": 4, "nombre": "Mouse Gamer Logitech G502 HERO", "precio": 49990, "valoracion": 5, "imagen": "https://images.pexels.com/photos/13870513/pexels-photo-13870513.jpeg?cs=srgb&dl=pexels-bertellifotografia-13870513.jpg&fm=jpg" },
+  { "id": 5, "nombre": "Teclado Mecánico HyperX Alloy Origins", "precio": 89990, "valoracion": 4, "imagen": "https://images.pexels.com/photos/1420709/pexels-photo-1420709.jpeg?cs=srgb&dl=pexels-goumbik-1420709.jpg&fm=jpg" },
+  { "id": 6, "nombre": "Audífonos Sony WH 1000XM5", "precio": 299990, "valoracion": 5, "imagen": "https://images.pexels.com/photos/210927/pexels-photo-210927.jpeg?cs=srgb&dl=pexels-spal-210927.jpg&fm=jpg" },
+  { "id": 7, "nombre": "SSD NVMe Samsung 980 PRO 1TB", "precio": 129990, "valoracion": 5, "imagen": "https://images.pexels.com/photos/5335964/pexels-photo-5335964.jpeg?cs=srgb&dl=pexels-japy-5335964.jpg&fm=jpg" },
+  { "id": 8, "nombre": "Cámara Web Logitech C920 HD Pro", "precio": 69990, "valoracion": 4, "imagen": "https://images.pexels.com/photos/7172701/pexels-photo-7172701.jpeg?cs=srgb&dl=pexels-bertellifotografia-7172701.jpg&fm=jpg" }
 ]
