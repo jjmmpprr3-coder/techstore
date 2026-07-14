@@ -1,122 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from 'react';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Banner from './components/banner';
+import ProductList from './components/ProductList';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+import productosJSON from './data/productos.json';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Estado para el carrito de compras (inicia en 0)
+  const [cart, setCart] = useState([]);
+  // Estado para los productos cargados desde el JSON
+  const [productos, setProductos] = useState(productosJSON);
+
+  // Función para agregar al carrito y actualizar el estado
+  const agregarAlCarrito = (producto) => {
+    setCart([...cart, producto]);
+  };
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div>
+      {/* Pasamos la cantidad del carrito por Props al Header */}
+      <Header cartCount={cart.length} />
+      <Navbar />
+      <Banner />
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+      <div className="main-section">
+        <div className="content-section">
+          <div className="section-title">
+            <h2>Productos Destacados</h2>
+            <a href="#" className="ver-todos">Ver todos</a>
+          </div>
+          {/* Pasamos los productos y la función por Props */}
+          <ProductList productos={productos} agregarAlCarrito={agregarAlCarrito} />
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <Sidebar />
+      </div>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      <div className="bottom-bar">
+         <div className="bottom-item">💳 Hasta 12 cuotas sin interés</div>
+         <div className="bottom-item">🚚 Despachos en 24 a 48 horas</div>
+         <div className="bottom-item">🔄 Devoluciones fáciles</div>
+         <div className="bottom-item">🛡️ Calidad garantizada</div>
+      </div>
+
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
