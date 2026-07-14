@@ -1,16 +1,32 @@
-# React + Vite
+# TechStore Chile
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Tienda virtual desarrollada para el catálogo de productos tecnológicos de TechStore, permitiendo visualización, búsqueda y gestión de carrito de compras.
 
-Currently, two official plugins are available:
+## Integrantes
+- Jonathan Pérez
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Objetivo
+Desarrollar una aplicación web responsiva utilizando React para modernizar la experiencia de usuario de TechStore, implementando componentes funcionales, manejo de estados y consumo de datos mediante JSON.
 
-## React Compiler
+## Tecnologías utilizadas
+- React + Vite
+- JavaScript (ES6)
+- CSS3
+- Git/GitHub
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Estructura del proyecto
+- `/src/components`: Componentes reutilizables (Header, Navbar, Footer, etc.)
+- `/src/data`: Archivo `productos.json` con el catálogo.
+- `/src/assets`: Recursos visuales.
 
-## Expanding the Oxlint configuration
+## Instrucciones de instalación
+1. Clonar el repositorio.
+2. Ejecutar `npm install` en la terminal.
+3. Ejecutar `npm run dev` para iniciar el servidor local.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Dificultades encontradas
+- Problemas con las rutas de importación al organizar los componentes.
+- Problemas técnicos de CORS al cargar imágenes externas, solucionado mediante el uso de URLs estables de servidores de imágenes.
+
+## Conclusiones
+El proyecto permitió aplicar conocimientos de programación Front-End, logrando una interfaz funcional que cumple con los requerimientos de navegación y lógica de estado solicitados.
