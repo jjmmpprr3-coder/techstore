@@ -8,45 +8,32 @@ import Footer from './components/Footer';
 import productosJSON from './data/productos.json';
 
 function App() {
-  // Estado para el carrito de compras (inicia en 0)
   const [cart, setCart] = useState([]);
-  // Estado para los productos cargados desde el JSON
   const [productos, setProductos] = useState(productosJSON);
+  const [busqueda, setBusqueda] = useState('');
 
-  // Función para agregar al carrito y actualizar el estado
   const agregarAlCarrito = (producto) => {
     setCart([...cart, producto]);
   };
 
+  // Filtrado de productos según el buscador
+  const productosFiltrados = productos.filter((p) =>
+    p.nombre.toLowerCase().includes(busqueda.toLowerCase())
+  );
+
   return (
     <div>
-      {/* Pasamos la cantidad del carrito por Props al Header */}
-      <Header cartCount={cart.length} />
+      <Header cartCount={cart.length} onSearch={setBusqueda} />
       <Navbar />
       <Banner />
-
       <div className="main-section">
         <div className="content-section">
-          <div className="section-title">
-            <h2>Productos Destacados</h2>
-            <a href="#" className="ver-todos">Ver todos</a>
-          </div>
-          {/* Pasamos los productos y la función por Props */}
-          <ProductList productos={productos} agregarAlCarrito={agregarAlCarrito} />
+          <ProductList productos={productosFiltrados} agregarAlCarrito={agregarAlCarrito} />
         </div>
         <Sidebar />
       </div>
-
-      <div className="bottom-bar">
-         <div className="bottom-item">💳 Hasta 12 cuotas sin interés</div>
-         <div className="bottom-item">🚚 Despachos en 24 a 48 horas</div>
-         <div className="bottom-item">🔄 Devoluciones fáciles</div>
-         <div className="bottom-item">🛡️ Calidad garantizada</div>
-      </div>
-
       <Footer />
     </div>
   );
 }
-
 export default App;
